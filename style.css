@@ -2,8 +2,37 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+/*-----------------------------------------------------------
+ styling header section 
+ -----------------------------------------------------------*/
+ nav{
+     display: flex;
+     justify-content:space-around;
+ }
+ nav .logo h3 a{
+     text-decoration: none;
+ }
+
+ nav .nav-items{
+     display: flex;
+ }
+ nav ul{
+     display: flex;
+ }
+ nav ul li{
+     list-style: none;
+     margin-left: 18px;
+ }
+nav ul li a{
+    text-decoration: none;
+}
+.nav-tools{
+    margin-top: 18px;
+    margin-left: 23px;
+    margin-right: 20px;
 
 
+}
 /* ---------------------------------------------
 Styling of first section
 ------------------------------------------------ */
@@ -63,15 +92,42 @@ article a{
     grid-column-gap:45px;
 }
 .product{
-    border: 1px solid lightskyblue;
+    /* border: 1px solid lightskyblue; */
     width: 329px;
     height: 476px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    padding: 15px 15px 15px 15px;
+    box-shadow:10px 10px 40px gray ;
 }
-.product-img{
+.product img{
     width: 300px;
     height: 256px;
+}
+.product .filled{
+    color: goldenrod;
+}
+.product .empty{
+    color: gray;
+}
+
+
+
+
+/* ------------------------------------styling footer ------------------------------*/
+footer{
+    background-color: #0a0826;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+footer h5{
+    font-size: 24px;
+    font-weight: 700;
+}
+footer p{
+    font-size: 14px;
+}
+footer span a{
+    padding-right: 20px;
+    color:wheat;
 }
