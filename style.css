@@ -1,51 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@400;500&display=swap');
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+    color: #3A3A3A;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
+/* section{
+    background-color:  #FFFFFF;
+} */
+
 /*-----------------------------------------------------------
  styling header section 
  -----------------------------------------------------------*/
  nav{
-     display: flex;
-     justify-content:space-around;
- }
- nav .logo h3 a{
-     text-decoration: none;
- }
-
- nav .nav-items{
-     display: flex;
- }
- nav ul{
-     display: flex;
- }
- nav ul li{
-     list-style: none;
-     margin-left: 18px;
- }
-nav ul li a{
+    display: flex;
+    justify-content:space-around;
+    /* background-color: hotpink; */
+}
+nav .logo h3 a{
     text-decoration: none;
+    margin-left: -2em;
+    color:#5A20CB;
+}
+
+nav .nav-items{
+    display: flex;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 18px;
+}
+nav ul li a{
+   text-decoration: none;
+   font-size: 16px;
 }
 .nav-tools{
-    margin-top: 18px;
-    margin-left: 23px;
-    margin-right: 20px;
+   color:#383CC1;
+   margin-top: 18px;
+   margin-left: 23px;
+   margin-right: 20px;
 
 
+}
+
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* ---------------------------------------------
 Styling of first section
 ------------------------------------------------ */
 .section-container-1{
+    /* background-color:orange; */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1em;
 }
 .blogs-container{
     width: 582px;
+    margin-right: 3em;
+    padding-left: 1em;
     /* height: 270px; */
 }
-article h1{
+
+article h2{
     color: #3A3A3A;
     font-size: 52px;
     font-weight: 700;
@@ -57,13 +86,14 @@ article p{
 .primary-btn{
     width: 196px;
     height: 44px;
-    background-color:#E02C6D;
-    border: 2px solid;
+    background-color:transparent;
+    /*  */
+    border: 2px solid#5A20CB;
     border-radius: 41px;
 }
 article a{
     text-decoration: none;
-    color: white;
+    color:#5A20CB;
 }
 .img-container img{
     width: 440px;
@@ -73,8 +103,11 @@ article a{
 
 /* -------------------------------------------Companies logo's section------------------- */
 .company-logo{
-    margin-left: 165px;
-    margin-right: 165px;
+    /* background-color: lightblue; */
+    border: 1 solid grey;
+    /* margin-left: 165px;
+    margin-right: 165px; */
+    margin-bottom: 2em;
     display: flex;
 }
 .company-logo img{
@@ -82,6 +115,9 @@ article a{
 }
 
 /* ----------------------------------Products section--------------------- */
+.products-section{
+    /* background-color: lightseagreen; */
+}
 .product-heading{
     text-align: center;
 }
@@ -96,7 +132,8 @@ article a{
     width: 329px;
     height: 476px;
     padding: 15px 15px 15px 15px;
-    box-shadow:10px 10px 40px gray ;
+    border-radius: 8px;
+    box-shadow: 0 0 39px #8080804a;
 }
 .product img{
     width: 300px;
@@ -108,9 +145,58 @@ article a{
 .product .empty{
     color: gray;
 }
+.products-btn-container .corner-btn{
+    text-align: right;
+    margin-top: 3em;
+}
+.products-btn-container p a{
+    text-decoration: none;
+    color: hotpink;
+    
+}
+/*------------------------------------------------ client feedback section----------------------------- */
+.clients-feedback-section{
+    text-align: center;
+}
+.clients-feedback-section h2{
+    font-size: 40px;
+}
 
+.clients{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap:4em;
+    grid-row-gap:2em;
+    margin-bottom: 2em;
+}
 
-
+.client{
+    
+    width: 400px;
+    height: 200px;
+    /* border: 1px solid lightseagreen; */
+    border-radius: 10px;
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 49px #80808052;
+    justify-content: center;
+    align-items: center;
+}
+.img-name{
+    display: flex;
+}
+.img-name img{
+    margin-right: 1em;
+}
+.img-name .resizing-img{
+    width: 70px;
+    height: 70px;
+}
+.client-quotes{
+    margin-left: 1em;
+    padding-right: 1em;
+}
 
 /* ------------------------------------styling footer ------------------------------*/
 footer{
@@ -130,4 +216,65 @@ footer p{
 footer span a{
     padding-right: 20px;
     color:wheat;
+}
+
+
+
+
+/*----------------------- responsive section */
+
+/* For mobile devices */
+@media only screen and (max-width:668px) {
+    nav,main,footer{
+        width:100%;
+    }
+    .section-container-1 {
+        flex-direction: column;
+        /* background-color: orange; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
+        margin-right: -6em;
+        margin-top: 3em;
+        margin-left: 18em;
+    }
+    .blogs-container{
+        order: 2;
+    }
+
+
+
+    /* second part */
+    .company-logo{
+        margin-left: 24em;
+    }
+.company-logo img {
+    padding: 10px 10px 10px 10px;
+}
+
+
+    /* third part */
+    .products-section {
+        margin-left: 20em;
+    }
+
+    .all-products{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .products-btn-container .corner-btn {
+        text-align: center;
+    }
+
+
+    /* ---------------------------------Fourth part--------------------- */
+    .clients-feedback-section {
+        height:100em;
+        margin-left: 15em;
+        /* text-align: center; */
+    }
+    .clients{
+
+    grid-template-columns: repeat(1,1fr);
+    }
 }
